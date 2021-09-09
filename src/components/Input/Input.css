@@ -1,0 +1,18 @@
+.input {
+  border: 1px solid gray;
+  border-radius: 4px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  width: 300px;
+}
+
+.small { font-size: small;}
+.medium { font-size: medium;}
+.large { font-size: large;}
