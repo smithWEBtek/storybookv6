@@ -3,7 +3,10 @@ import Button from './Button';
 
 export default {
   title: 'Form/Button',
-  component: Button
+  component: Button,
+  // args: { // specifying args at the component level
+  //   children: 'button'
+  // }
 }
 
 export const Primary = () => (
@@ -21,3 +24,24 @@ export const Success = () => (
 export const Danger = () => (
   <Button variant='danger'>Danger</Button>
 )
+
+const Template = args => <Button {...args} />
+
+export const PrimaryA = Template.bind({})
+PrimaryA.args = {
+  variant: 'primary',
+  children: 'Primary Args'
+}
+
+// extending props from other story
+export const LongPrimaryA = Template.bind({})
+LongPrimaryA.args = {
+  ...PrimaryA.args,
+  children: 'Long Primary Args'
+}
+
+export const SecondaryA = Template.bind({})
+SecondaryA.args = {
+  variant: 'secondary',
+  children: 'Secondary Args'
+}
